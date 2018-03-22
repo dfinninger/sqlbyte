@@ -1,0 +1,2 @@
+prompt_toolkit==1.0.15
+pygments==2.2.0

@@ -5,7 +5,7 @@ Tools for parsing token lists into structured grammars.
 """
 import itertools
 
-from sqlbyte.tokens import Tokens
+from src.sqlbyte.tokens import Tokens
 
 _SELECT_ERROR_PREAMBLE = 'Malformed SELECT statement'
 _INSERT_ERROR_PREAMBLE = 'Malformed INSERT statement'
@@ -24,9 +24,12 @@ def validate(token_list: list):
     param token_list: list of tokens
     raises: ParserValidationError is issues arise
     """
+    if not token_list:
+        return []
+
     # Copy the token list so that we can be destructive
     tl = list(token_list)
-    statement_type = tl[0]
+    statement_type = tl[0].token
 
     if statement_type == Tokens.SELECT:
         _validate_select_statement(tl)

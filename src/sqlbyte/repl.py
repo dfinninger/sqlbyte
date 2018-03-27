@@ -1,8 +1,9 @@
 from prompt_toolkit import prompt_async
 from pygments.lexers.sql import SqlLexer
 
-from sqlbyte import lexer, parser
-from sqlbyte.tokens import Tokens
+from src.sqlbyte import parser
+from src.sqlbyte import lexer
+from src.sqlbyte.tokens import Tokens
 
 
 async def run():

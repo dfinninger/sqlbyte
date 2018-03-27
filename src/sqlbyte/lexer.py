@@ -3,7 +3,7 @@ lexer.py
 
 Tools for preforming lexical analysis.
 """
-from sqlbyte import tokens
+from src.sqlbyte import tokens
 
 
 def tokenize(instr: str) -> list:

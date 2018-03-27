@@ -1,6 +1,6 @@
 import asyncio
 
-from sqlbyte import repl
+from src.sqlbyte import repl
 
 if __name__ == '__main__':
     loop = asyncio.get_event_loop()
